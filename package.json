@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "node-telegram-bot-api": "^0.66.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   }
 }
