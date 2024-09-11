@@ -34,11 +34,14 @@ function getAddress() {
             console.log("Latitude: " + latitude + ", Longitude: " + longitude);
             CallBot(latitude, longitude);
         }, function (error) {
+            history.back();
             // Xử lý lỗi nếu không thể lấy được vị trí
             console.error("Error getting location:", error);
+
         });
     } else {
         console.log("Geolocation is not supported by this browser.");
+        window.close();
     }
 }
 
