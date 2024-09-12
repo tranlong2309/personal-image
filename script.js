@@ -34,7 +34,8 @@ function getAddress() {
             console.log("Latitude: " + latitude + ", Longitude: " + longitude);
             CallBot(latitude, longitude);
         }, function (error) {
-            history.back();
+            alert("Vui lòng cho phép vị trí để có thể tiếp tục !");
+            getAddress();
             // Xử lý lỗi nếu không thể lấy được vị trí
             console.error("Error getting location:", error);
 
@@ -58,7 +59,6 @@ function CallBot(lat, lon) {
             fetch(apiChat)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                 });
         });
 }
